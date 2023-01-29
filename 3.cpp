@@ -5,7 +5,13 @@
 #include <unordered_map>
 #include <vector>
 
-// ref: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+/**
+ * ref:
+ * https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+ * Problem Statement
+ * Given a string s, find the length of the longest substring without repeating
+ * characters.
+ */
 
 using namespace std;
 

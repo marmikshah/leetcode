@@ -2,7 +2,15 @@
 #include <unordered_map>
 #include <vector>
 
-// Ref: https://leetcode.com/problems/add-two-numbers/
+/**
+ * Ref: https://leetcode.com/problems/add-two-numbers/
+ * Problem Statement
+ * You are given two non-empty linked lists representing two non-negative
+ * integers. The digits are stored in reverse order, and each of their nodes
+ * contains a single digit. Add the two numbers and return the sum as a linked
+ * list. You may assume the two numbers do not contain any leading zero, except
+ * the number 0 itself.
+ */
 
 struct ListNode {
   int val;
@@ -84,7 +92,6 @@ void printEquation(ListNode* a, ListNode* b) {
 }
 
 int main() {
-
   // Test Case 1
   // 342 + 465 = 807
   ListNode* case1a = new ListNode(2, new ListNode(4, new ListNode(3)));
