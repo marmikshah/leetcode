@@ -1,18 +1,5 @@
-#include <iostream>
-#include <unordered_map>
-#include <vector>
-
-using namespace std;
-
 // ref: https://leetcode.com/problems/two-sum/
-
-/**
- * Problem Statement:
- * Given an array of integers nums and an integer target, return indices of the
- two numbers such that they add up to target. You may assume that each input
- would have exactly one solution, and you may not use the same element twice.
-   You can return the answer in any order.
-*/
+#include "common.hpp"
 
 class Solution {
  public:
@@ -26,7 +13,6 @@ class Solution {
       if (cache.find(difference) == cache.end()) {
         cache[item] = i;
       } else {
-        // Item found
         result.push_back(cache[difference]);
         result.push_back(i);
         break;
@@ -35,3 +21,31 @@ class Solution {
     return result;
   }
 };
+
+struct TestCase {
+  vector<int>& nums;
+  int target; 
+  vector<int> expectedOutput;
+
+  TestCase(vector<int> nums, int target, vector<int> expectedOutput) {
+    this->nums = nums;
+    this->target = target;
+    this->expectedOutput = expectedOutput;
+  }
+
+  bool didPassTest(Solution *sol){
+    vector<int> result = sol->twoSum(this->nums, this->target);
+    return result == expectedOutput;
+  }
+};
+
+int main() {
+  TestCase cases[] = {
+    TestCase({}, 2, {})
+  };
+  Solution *soln;
+  for(TestCase _case: cases){
+    assert(_case.didPassTest(soln));
+  }
+  cout<<"All Tests Passed!"<<std::endl;
+}
