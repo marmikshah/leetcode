@@ -65,5 +65,28 @@
         "stop_token": "cpp",
         "thread": "cpp",
         "typeindex": "cpp"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff", 
+        "editor.formatOnType": true,
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.wordBasedSuggestions": "off"
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnType": true,
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.wordBasedSuggestions": "off"
     }
 }
